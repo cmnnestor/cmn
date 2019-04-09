@@ -153,7 +153,7 @@ footer{
 /*****MEDIA QUERIES*****/
 @media only screen and (max-device-width: 410px) {
 
-	#head{flex-flow: column; font-size: 70%; height: auto; width: 100vw; background-color: rgba(54, 169, 174);}
+	#head{flex-flow: column; font-size: 70%; height: auto; width: 100vw;}
 	#head .mainnav{flex-flow: row; border-top: solid 1px rgb(0, 61, 64);}
 	#head .mainnav a{padding: 8px 10px;}
 	#head .mainnav a:hover{background: none; color: white;}
