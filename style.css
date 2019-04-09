@@ -1,0 +1,192 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	max-width: 100vw;
+	overflow: auto;
+}
+
+.wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	width: auto;
+	padding: 0;
+}
+
+/*****HEADER*****/
+
+#head{
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	height: 60px;
+	padding: 0px 30px;
+	margin: 0;
+	background: rgba(54, 169, 174);
+	font-family: 'Oswald', sans-serif;
+}
+
+#head h3{
+	float: left;
+}
+
+#head a:link, a:visited, a:active {color: rgb(0, 61, 64); font-weight: 50; text-decoration: none;}
+
+#head a {
+	letter-spacing: 2px;
+}
+
+.mainnav{
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+
+}
+
+.mainnav a{
+	padding: 18px 15px;
+}
+
+#head .mainnav a:hover{
+	background: rgb(102, 199, 203);
+}
+
+/*****MAIN CONTENT*****/
+
+#description{
+	display: flex;
+	flex-flow: row;
+	padding: 0px 50px;
+	margin: 30px 15px;
+	width: 100vw;
+	height: auto;
+	border-top: solid 1px rgba(54, 169, 174);
+	border-bottom: solid 1px rgba(54, 169, 174);
+	text-indent: 40px;
+	text-align: justify;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#description article{
+
+}
+
+#description article h3{
+	background: linear-gradient(to right, rgba(54, 169, 174, 0.3), rgb(255, 255, 255));
+	border-radius: 7px;
+}
+#slideshow{
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	overflow: auto;
+}
+
+#slideshow ul{
+	display: grid;
+	grid-template: repeat(5, auto) / repeat(2, auto);
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 0px 30px;
+}
+
+#slideshow ul li{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color 0.5s ease;
+	margin: 3px;
+}
+
+#slideshow ul li:hover{
+	background-color: rgba(0, 0, 0, 0);
+
+}
+
+#slideshow ul li div {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	transition: color 0.4s ease;
+}
+
+#slideshow ul li div:hover{
+	color: rgba(0, 0, 0, 0);
+}
+
+#slideshow ul li img{
+	width: 480px;
+	height: 300px;
+	max-width: 100%;
+	max-height: 100%
+	padding: 0px;
+	position: relative;
+	z-index: -1;
+}
+
+/*****FOOTER*****/
+
+footer{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 50px;
+	bottom: 0;
+	background: rgba(54, 169, 174);
+	font-family: 'Oswald', sans-serif;
+}
+
+/*****MEDIA QUERIES*****/
+@media only screen and (max-device-width: 410px) {
+
+	#head{flex-flow: column; font-size: 70%; height: auto; width: 100vw;}
+	#head .mainnav{flex-flow: row; border-top: solid 1px rgb(0, 61, 64);}
+	#head .mainnav a{padding: 8px 10px;}
+	#head .mainnav a:hover{background: none; color: white;}
+
+	#description{flex-direction: row; padding: 3px; font-size: 70%;}
+	#slideshow ul{display: grid; grid-template: repeat(10, auto) / auto;}
+	#slideshow ul li img{max-height: 170px; max-width: 260px;}
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 767px){
+
+	#head{flex-flow: column; font-size: 70%; height: auto; width: 100vw;}
+	#head .mainnav{flex-flow: row; border-top: solid 1px rgb(0, 61, 64);}
+	#head .mainnav a{padding: 8px 10px;}
+	#head .mainnav a:hover{background: none; color: white;}
+
+	#description{flex-direction: row; padding: 3px; font-size: 70%;}
+	#slideshow ul{display: grid; grid-template: repeat(10, auto) / auto;}
+	#slideshow ul li img{max-height: 260px; max-width: 408px;}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px){
+	#head{flex-flow: row; font-size: 100%; height: auto; width: 100vw;}
+
+	#description{flex-direction: row; padding: 3px; font-size: 100%;}
+	#slideshow ul{display: grid;}
+	#slideshow ul li img{max-height: 230px; min-width: 350px; max-width: 360px;}
+}
+
+@media only screen and (min-device-width: 993px){
+	#head{flex-flow: row; font-size: 100%; height: auto; width: 100vw;}
+
+	#description{flex-direction: row; padding: 3px; font-size: 100%;}
+	#slideshow ul{display: grid;}
+	#slideshow ul li img{max-height: 300px; max-width: 440px;}
+}
